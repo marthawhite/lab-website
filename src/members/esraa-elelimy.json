@@ -3,11 +3,13 @@
   "role": "PhD Student",
   "coSupervisor": "",
   "program": "Computing Science",
-  "joiningDate": "",
+  "joiningDate": "2023-09-01",
   "researchAreas": [
-    "Reinforcement Learning"
+    "Credit Assignment",
+    "Continual Learning",
+    "Representation Learning"
   ],
   "website": "https://esraaelelimy.github.io/",
-  "googleScholar": "",
-  "photo": "/assets/images/placeholders/member-placeholder.svg"
+  "googleScholar": "https://scholar.google.com/citations?user=JUf_Rd8AAAAJ",
+  "photo": "/assets/images/people/esraa.png"
 }
