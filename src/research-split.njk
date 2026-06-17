@@ -1,0 +1,23 @@
+---
+layout: layouts/page.njk
+title: Research
+permalink: /research-split/
+---
+{% from "partials/selected-pubs.njk" import selectedPublications %}
+{% set researchView = "split" %}
+{% include "partials/research-top.njk" %}
+
+<section class="section research-split">
+  {% for topic in research %}
+    <article class="research-spl">
+      <div class="research-spl__media">
+        <img src="{{ topic.image | withBaseUrl }}" alt="">
+      </div>
+      <div class="research-spl__body">
+        <h2 class="research-topic__title">{{ topic.title }}</h2>
+        <div class="research-topic__body">{{ topic.body | markdown | safe }}</div>
+        {{ selectedPublications(publications | resolvePublications(topic.publications)) }}
+      </div>
+    </article>
+  {% endfor %}
+</section>

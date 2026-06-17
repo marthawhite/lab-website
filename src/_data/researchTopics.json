@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Continual Learning",
+    "summary": "Designing agents that keep learning and adapting throughout deployment, rather than freezing after training. We study plasticity loss, catastrophic forgetting, and learning under non-stationarity.",
+    "keywords": ["plasticity", "non-stationarity", "lifelong learning"]
+  },
+  {
+    "title": "Representation Learning",
+    "summary": "Learning compact, reusable state representations — including sparse representations and recurrent architectures — that make downstream prediction and control more sample-efficient.",
+    "keywords": ["sparse representations", "recurrent architectures", "auxiliary tasks"]
+  },
+  {
+    "title": "Model-Based RL & Planning",
+    "summary": "Building learned models of the world from options and value functions, and planning with them to make good decisions from limited data.",
+    "keywords": ["options", "value functions", "approximate planning"]
+  },
+  {
+    "title": "Off-Policy Learning",
+    "summary": "Learning about many policies and predictions from a single stream of experience — the foundation for scalable predictive knowledge and general value functions.",
+    "keywords": ["general value functions", "predictive knowledge", "importance sampling"]
+  },
+  {
+    "title": "Reinforcement Learning Theory",
+    "summary": "Sound, approximate policy iteration and action-value methods, with an emphasis on guarantees that hold under function approximation.",
+    "keywords": ["policy iteration", "convergence", "function approximation"]
+  },
+  {
+    "title": "Real-World Reinforcement Learning",
+    "summary": "Deploying RL in the physical world — water treatment automation, industrial control, scientific instruments — where sample efficiency, safety, and continual adaptation matter most.",
+    "keywords": ["water treatment", "industrial control", "applied RL"]
+  }
+]
