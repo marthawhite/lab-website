@@ -10,5 +10,6 @@ module.exports = {
   homeBio: readMarkdownFile("home-bio.md"),
   aboutMe: readMarkdownFile("about-me.md"),
   researchFocus: readMarkdownFile("research-focus.md"),
+  researchIntro: readMarkdownFile("research-intro.md"),
   prospectiveStudents: readMarkdownFile("prospective-students.md")
 };

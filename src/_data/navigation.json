@@ -8,6 +8,10 @@
     "url": "/lab/"
   },
   {
+    "label": "Research",
+    "url": "/research-sidebar/"
+  },
+  {
     "label": "Publications",
     "url": "/publications/"
   },

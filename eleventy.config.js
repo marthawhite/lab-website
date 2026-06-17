@@ -207,6 +207,45 @@ module.exports = function (eleventyConfig) {
     return "";
   });
 
+  const ALUMNI_GROUPS = [
+    { title: "Postdoctoral Researchers", match: /postdoc|research associate/i },
+    { title: "PhD Students", match: /phd/i },
+    { title: "MSc Students", match: /msc|master/i },
+    { title: "Undergraduate Students", match: /under\s?grad|honou?rs|b\.?sc/i }
+  ];
+
+  eleventyConfig.addFilter("groupAlumni", (items = []) => {
+    const buckets = ALUMNI_GROUPS.map((group) => ({ title: group.title, items: [] }));
+    const other = { title: "Other", items: [] };
+
+    (Array.isArray(items) ? items : []).forEach((alum) => {
+      const role = alum && alum.role ? alum.role : "";
+      const index = ALUMNI_GROUPS.findIndex((group) => group.match.test(role));
+
+      if (index === -1) {
+        other.items.push(alum);
+      } else {
+        buckets[index].items.push(alum);
+      }
+    });
+
+    const result = buckets.filter((bucket) => bucket.items.length);
+    if (other.items.length) {
+      result.push(other);
+    }
+    return result;
+  });
+
+  eleventyConfig.addFilter("resolvePublications", (publications = [], refs = []) => {
+    if (!Array.isArray(publications) || !Array.isArray(refs)) {
+      return [];
+    }
+
+    return refs
+      .map((ref) => publications.find((pub) => pub && (pub.slug === ref || pub.id === ref)))
+      .filter(Boolean);
+  });
+
   eleventyConfig.addFilter("memberWebsite", (members = [], name = "") => {
     if (!name) {
       return "";
