@@ -52,16 +52,11 @@ permalink: /lab/
           <article class="alum">
             <div class="alum__years">{% if alum.joiningYear and alum.endingYear %}{{ alum.joiningYear }}&#8202;&ndash;&#8202;{{ alum.endingYear }}{% elif alum.endingYear %}{{ alum.endingYear }}{% elif alum.joiningYear %}{{ alum.joiningYear }}{% else %}&mdash;{% endif %}</div>
             <div class="alum__body">
-              <p class="alum__name">{{ alum.name }}</p>
+              <p class="alum__name">{% if alum.website %}<a href="{{ alum.website | withBaseUrl }}">{{ alum.name }}</a>{% else %}{{ alum.name }}{% endif %}</p>
               <p class="alum__role">{{ alum.role }}{% if alum.coSupervisor %} &middot; co-supervised with {{ alum.coSupervisor }}{% endif %}</p>
-              {% if alum.currentRole or alum.currentOrganization or alum.website %}
+              {% if alum.currentRole or alum.currentOrganization %}
                 <p class="alum__now">
-                  {%- if alum.currentRole or alum.currentOrganization -%}
-                    <span class="alum__now-label">Now</span>{% if alum.currentRole %}{{ alum.currentRole }}{% endif %}{% if alum.currentOrganization %}{% if alum.currentRole %}, {% endif %}{{ alum.currentOrganization }}{% endif %}
-                  {%- endif -%}
-                  {%- if alum.website -%}
-                    {% if alum.currentRole or alum.currentOrganization %} <span class="alum__sep">&middot;</span> {% endif %}<a href="{{ alum.website | withBaseUrl }}">website</a>
-                  {%- endif -%}
+                  <span class="alum__now-label">Now</span>{% if alum.currentRole %}{{ alum.currentRole }}{% endif %}{% if alum.currentOrganization %}{% if alum.currentRole %}, {% endif %}{{ alum.currentOrganization }}{% endif %}
                 </p>
               {% endif %}
             </div>
