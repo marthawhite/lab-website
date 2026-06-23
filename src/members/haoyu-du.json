@@ -1,0 +1,14 @@
+{
+  "name": "Haoyu Du",
+  "role": "PhD Student",
+  "coSupervisor": "Rich Sutton",
+  "program": "Computing Science",
+  "joiningDate": "2025-09-01",
+  "researchAreas": [
+    "Reinforcement Learning",
+    "Continual Learning"
+  ],
+  "website": "https://webdocs.cs.ualberta.ca/~du2/",
+  "googleScholar": "https://scholar.google.com/citations?user=XvKnWGYAAAAJ",
+  "photo": "/assets/images/people/haoyu-du.jpg"
+}
