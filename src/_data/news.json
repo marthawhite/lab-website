@@ -1,26 +1,25 @@
 [
   {
-    "title": "Paper accepted at NeurIPS 2026",
-    "date": "2026-02-12",
+    "title": "Tutorial on Reinforcement Learning for Control accepted to INFORMS, to be presented in San Franscisco in November 2026",
+    "date": "2026-06-12",
     "url": "https://example.edu/news/neurips-2026",
     "external": true
   },
   {
-    "title": "New PhD student joins the lab",
-    "date": "2026-01-18",
+    "title": "Matthew Vandergrift presenting our work on RL and simulators at ICML 2026",
+    "date": "2026-07-05",
+    "url": "https://icml.cc/virtual/2026/poster/67184",
+    "external": true
+  },
+  {
+      "title": "Martha presenting at Upper Bound about Safe RL in the Real World Safe Online Reinforcement Learning by Restricting the Environment",
+    "url": "https://example.edu/workshop/safe-rl",
+    "external": true
+  },
+  {
+    "title": "Undergrads and incoming MSc students join the lab in the summer. Welcome incoming MSc Shivani Singal and undergrads Xinjia Fan, Aldo Furlani and Ray Shu!",
+    "date": "2026-05-01",
     "url": "",
     "external": false
-  },
-  {
-    "title": "Workshop on safe reinforcement learning",
-    "date": "2025-11-03",
-    "url": "https://example.edu/workshop/safe-rl",
-    "external": true
-  },
-  {
-    "title": "Workshop on safe reinforcement learning",
-    "date": "2025-11-05",
-    "url": "https://example.edu/workshop/safe-rl",
-    "external": true
   }
 ]
