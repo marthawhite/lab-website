@@ -15,24 +15,38 @@
     "position": "Professor",
     "affiliations": [
       {
-        "label": "Reinforcement Learning and AI Lab (RLAI)",
-        "url": "https://rlai.ualberta.ca/"
+        "segments": [
+          { "text": "Associate Professor, Department of Computing Science, University of Alberta" }
+        ]
       },
       {
-        "label": "Alberta Machine Intelligence Institute (Amii)",
-        "url": "https://www.amii.ca/"
+        "segments": [
+          { "text": "Canada CIFAR AI Chair", "url": "https://cifar.ca/" },
+          { "text": " and Fellow of the " },
+          { "text": "Alberta Machine Intelligence Institute", "url": "https://www.amii.ca/" }
+        ]
       },
       {
-        "label": "Canada CIFAR AI Chair",
-        "url": "https://cifar.ca/"
+        "segments": [
+          { "text": "Member of the " },
+          { "text": "Reinforcement Learning and AI Lab (RLAI)", "url": "https://rlai.ualberta.ca/" }
+        ]
       },
       {
-        "label": "Fellow of CIFAR Program Learning in Machines and Brains",
-        "url": "https://cifar.ca/research-programs/learning-in-machines-brains/"
+        "segments": [
+          { "text": "Fellow of the CIFAR Learning in Machine and Brains Program", "url": "https://cifar.ca/research-programs/learning-in-machines-brains/" }
+        ]
       },
-	{
-        "label": "RLCore",
-        "url": "https://rlcore.ai/"
+      {
+        "segments": [
+          { "text": "Member of the College of New Scholars, Artists and Scientists in the Royal Society of Canada" }
+        ]
+      },
+      {
+        "segments": [
+          { "text": "CEO of " },
+          { "text": "RLCore", "url": "https://rlcore.ai/" }
+        ]
       }
     ],
     "profileLinks": [

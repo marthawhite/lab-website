@@ -1,19 +1,6 @@
-{% set researchViews = [
-  { key: "sidebar", label: "Sidebar", url: "/research-sidebar/" },
-  { key: "feature", label: "Feature", url: "/research-feature/" },
-  { key: "split", label: "Split", url: "/research-split/" },
-  { key: "banner", label: "Banner", url: "/research-banner/" }
-] %}
-
 <header class="page-header">
   <h1 class="page-header__title">Research</h1>
 </header>
-
-<nav class="research-views" aria-label="Research layout">
-  {% for view in researchViews %}
-    <a href="{{ view.url | withBaseUrl }}"{% if view.key == researchView %} aria-current="page"{% endif %}>{{ view.label }}</a>
-  {% endfor %}
-</nav>
 
 <div class="research-intro">
   {{ siteText.researchIntro | markdown | safe }}
