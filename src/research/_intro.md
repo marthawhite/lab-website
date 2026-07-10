@@ -1,3 +1,1 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
+This page outlines the key topics pursued in the lab, with some associated publications. If there are numbered citations in the description, then these are references to the publication number in my CV, with prefix C meaning it is a conference paper(e.g., C30)  and J meaning it is a journal paper (e.g., J79). (Last updated June 30, 2026).

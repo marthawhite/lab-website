@@ -1,14 +1,13 @@
 ---
 title: Continual Learning
-order: 1
+order: 4
 publications:
   - 2025-rethinking-the-foundations-for-continual-reinforcement-learning
   - 2025-position-lifetime-tuning-is-incompatible-with-continual-reinforcement-learning
+  - 2023-measuring-and-mitigating-interference-in-reinforcement-learning
   - 2021-continual-auxiliary-task-learning
+  - 2020-adapting-behaviour-via-intrinsic-reward-a-survey-and-empirical-study
   - 2019-meta-learning-representations-for-continual-learning
+  - 2017-unifying-task-specification-in-reinforcement-learning
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-
-Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
+Designing agents that keep learning and adapting throughout deployment, rather than freezing after training. We study plasticity loss, catastrophic forgetting, and learning under non-stationarity. Arguably, a lot of our work can be considered continual learning, but here we list some that are more specifically framed to be about continual learning. 
