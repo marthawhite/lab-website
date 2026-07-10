@@ -2,7 +2,7 @@
   {
     "title": "Tutorial on Reinforcement Learning for Control accepted to INFORMS, to be presented in San Franscisco in November 2026",
     "date": "2026-06-12",
-    "url": "https://example.edu/news/neurips-2026",
+    "url": "https://meetings.informs.org/wordpress/annual/",
     "external": true
   },
   {
@@ -13,7 +13,8 @@
   },
   {
       "title": "Martha presenting at Upper Bound about Safe RL in the Real World Safe Online Reinforcement Learning by Restricting the Environment",
-    "url": "https://example.edu/workshop/safe-rl",
+         "date": "2026-05-14", 
+    "url": "https://www.upperbound.ai/schedule/2026?date=2026-05-19&showSession=773080",
     "external": true
   },
   {
