@@ -375,7 +375,7 @@ function buildPublication(filePath, parsed) {
     badge: buildBadge(venueTag, type, year, fields),
     type,
     section: inferPublicationSection(filePath),
-    order: Number.parseInt(fields.order, 10) || 999,
+    order: Number.parseInt(fields.order, 10) || 0,
     links: buildLinks(fields),
     bibtex: raw
   };
