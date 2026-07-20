@@ -46,8 +46,8 @@ function sortPublications(items = []) {
       return (b.year || 0) - (a.year || 0);
     }
 
-    if ((a.order || 999) !== (b.order || 999)) {
-      return (a.order || 999) - (b.order || 999);
+    if ((a.order || 0) !== (b.order || 0)) {
+      return (b.order || 0) - (a.order || 0);
     }
 
     return (a.title || "").localeCompare(b.title || "");
