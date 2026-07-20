@@ -1,0 +1,18 @@
+{% macro selectedPublications(pubs) %}
+  {% if pubs.length %}
+    <div class="research-pubs">
+      <p class="research-pubs__label">Selected publications</p>
+      <ol class="research-pubs__list">
+        {% for pub in pubs %}
+          <li class="research-pub">
+            <span class="research-pub__title">{{ pub.title }}</span>
+            {%- if pub.authors %} <span class="research-pub__authors">{{ pub.authors }}</span>{% endif -%}
+            {%- if pub.venue or pub.year %} <span class="research-pub__venue">{{ pub.venue }}{% if pub.venue and pub.year %}, {% endif %}{{ pub.year }}</span>{% endif -%}
+            {%- set links = pub | publicationLinks -%}
+            {%- if links.length %} <span class="research-pub__links">{% for link in links %}<a href="{{ link.url | withBaseUrl }}">{{ link.label }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</span>{% endif -%}
+          </li>
+        {% endfor %}
+      </ol>
+    </div>
+  {% endif %}
+{% endmacro %}

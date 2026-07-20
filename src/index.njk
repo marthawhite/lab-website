@@ -12,12 +12,12 @@ permalink: /
   <div class="hero__content">
     <h1>{{ site.facultyName }}</h1>
     <p class="lede hero__affiliations">
-      Associate Professor, Department of Computing Science, University of Alberta<br>
-      <a href="https://cifar.ca/">Canada CIFAR AI Chair</a> and Fellow of the <a href="https://www.amii.ca/">Alberta Machine Intelligence Institute</a><br>
-      Member of the <a href="https://rlai.ualberta.ca/">Reinforcement Learning and AI Lab (RLAI)</a><br>
-      Fellow of the CIFAR Learning in Machine and Brains Program<br>
-      Member of the College of New Scholars, Artists and Scientists in the Royal Society of Canada<br>
-      CEO of <a href="https://rlcore.ai/">RLCore</a>
+      {%- for line in site.contact.affiliations %}
+        {%- for seg in line.segments -%}
+          {%- if seg.url -%}<a href="{{ seg.url }}">{{ seg.text }}</a>{%- else -%}{{ seg.text }}{%- endif -%}
+        {%- endfor -%}
+        {%- if not loop.last %}<br>{% endif -%}
+      {%- endfor %}
     </p>
     <p class="hero-links">
       <a href="{{ site.socialLinks[0].url | withBaseUrl }}">Google Scholar</a>

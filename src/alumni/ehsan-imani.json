@@ -1,10 +1,13 @@
 {
   "name": "Ehsan Imani",
-  "role": "MSc Student",
+  "role": "PhD Student",
   "coSupervisor": "",
+  "program": "Computing Science",
   "joiningDate": "",
-  "endingDate": "2019-12-31",
-  "currentRole": "PhD",
+  "researchAreas": [
+    "Reinforcement Learning"
+  ],
   "website": "https://webdocs.cs.ualberta.ca/~imani/",
-  "currentOrganization": "UofA"
+  "googleScholar": "",
+  "photo": "/assets/images/placeholders/member-placeholder.svg"
 }

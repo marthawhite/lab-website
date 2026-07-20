@@ -366,6 +366,7 @@ function buildPublication(filePath, parsed) {
 
   return {
     id: key || path.basename(fileName, ".bib"),
+    slug: path.basename(fileName, ".bib"),
     title: cleanText(fields.title || ""),
     authors: formatAuthors(fields.author || ""),
     venue,

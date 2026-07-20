@@ -1,10 +1,10 @@
 {
-  "siteName": "Reinforcement Learning and Intelligent Agents Lab",
-  "shortName": "RLAI Lab",
+  "siteName": "Reinforcement Learning and Artificial Intelligence Lab",
+  "shortName": "RLAIM Lab",
   "facultyName": "Martha White",
-  "facultyTitle": "Associate Professor of Computing Science, CEO of RLCore",
+  "facultyTitle": "Professor of Computing Science, CEO of RLCore",
   "institution": "University of Alberta",
-  "description": "Academic wesbite for Martha White's research lab, focused on reinforcement learning and intelligent agents.",
+  "description": "Academic wesbite for Martha White's research lab, focused on reinforcement learning and machine learning.",
   "homeImage": "/assets/images/people/martha-white-headshot.jpg",
   "photoImage": "/assets/images/people/martha-white-photo.jpg",
   "groupPhoto": "/assets/images/groups/martha-white-group-2026.jpg",
@@ -12,23 +12,41 @@
     "email": "whitem [at] ualberta [dot] ca",
     "office": "UCOMM 7-243",
     "address": "University Commons, University of Alberta",
-    "position": "Associate Professor",
+    "position": "Professor",
     "affiliations": [
       {
-        "label": "Reinforcement Learning and AI Lab (RLAI)",
-        "url": "https://rlai.ualberta.ca/"
+        "segments": [
+          { "text": "Associate Professor, Department of Computing Science, University of Alberta" }
+        ]
       },
       {
-        "label": "Alberta Machine Intelligence Institute (Amii)",
-        "url": "https://www.amii.ca/"
+        "segments": [
+          { "text": "Canada CIFAR AI Chair", "url": "https://cifar.ca/" },
+          { "text": " and Fellow of the " },
+          { "text": "Alberta Machine Intelligence Institute", "url": "https://www.amii.ca/" }
+        ]
       },
       {
-        "label": "Canada CIFAR AI Chair",
-        "url": "https://cifar.ca/"
+        "segments": [
+          { "text": "Member of the " },
+          { "text": "Reinforcement Learning and AI Lab (RLAI)", "url": "https://rlai.ualberta.ca/" }
+        ]
       },
       {
-        "label": "RLCore",
-        "url": "https://rlcore.ai/"
+        "segments": [
+          { "text": "Fellow of the CIFAR Learning in Machine and Brains Program", "url": "https://cifar.ca/research-programs/learning-in-machines-brains/" }
+        ]
+      },
+      {
+        "segments": [
+          { "text": "Member of the College of New Scholars, Artists and Scientists in the Royal Society of Canada" }
+        ]
+      },
+      {
+        "segments": [
+          { "text": "CEO of " },
+          { "text": "RLCore", "url": "https://rlcore.ai/" }
+        ]
       }
     ],
     "profileLinks": [

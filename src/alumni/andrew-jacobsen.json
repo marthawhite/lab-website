@@ -1,10 +1,13 @@
 {
   "name": "Andrew Jacobsen",
-  "role": "MSc Student",
-  "coSupervisor": "",
+  "role": "PhD Student",
+  "coSupervisor": "Ashok Cutkosky",
+  "program": "Computing Science",
   "joiningDate": "",
-  "endingDate": "2019-12-31",
-  "currentRole": "PhD",
+  "researchAreas": [
+    "Reinforcement Learning"
+  ],
   "website": "",
-  "currentOrganization": "UofA"
+  "googleScholar": "",
+  "photo": "/assets/images/placeholders/member-placeholder.svg"
 }

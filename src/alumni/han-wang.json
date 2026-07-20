@@ -1,10 +1,13 @@
 {
   "name": "Han Wang",
-  "role": "MSc Student",
-  "coSupervisor": "",
+  "role": "PhD Student",
+  "coSupervisor": "Adam White",
+  "program": "Computing Science",
   "joiningDate": "",
-  "endingDate": "2020-12-31",
-  "currentRole": "PhD",
+  "researchAreas": [
+    "Reinforcement Learning"
+  ],
   "website": "https://hwang-ua.github.io/",
-  "currentOrganization": "UofA"
+  "googleScholar": "",
+  "photo": "/assets/images/placeholders/member-placeholder.svg"
 }

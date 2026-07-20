@@ -1,1 +1,1 @@
-I love soccer, volleyball, snowboarding, snorkelling, outdoor activities, cooking, (board) games and, especially, reading sci-fi and fantasy.
+I love soccer, volleyball, snowboarding, snorkelling, outdoor activities, cooking, (board) games and, especially, reading sci-fi and fantasy. I am from Edmonton, born to two wonderful Slovak parents, and am married to someone I get to do research with, [Adam White](https://amw8.github.io/).
