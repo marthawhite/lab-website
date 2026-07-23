@@ -2,12 +2,9 @@
   "name": "Brett Daley",
   "role": "PhD Student",
   "coSupervisor": "Marlos Machado",
-  "program": "Computing Science",
   "joiningDate": "",
-  "researchAreas": [
-    "Reinforcement Learning"
-  ],
+  "endingDate": "2025-05-27",
+  "currentRole": "Research Scientist",
   "website": "https://brett-daley.github.io/",
-  "googleScholar": "",
-  "photo": "/assets/images/placeholders/member-placeholder.svg"
+  "currentOrganization": "Meta"
 }
