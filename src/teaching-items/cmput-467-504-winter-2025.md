@@ -6,7 +6,7 @@ year: 2025
 current: false
 links:
   - label: "[Website]"
-    url: https://marthawhite.github.io/machinelearning2/
+    url: https://marthawhite.github.io/machinelearning2/2025/schedule.html
 ---
 Another miracle has come to pass, and we will now have a Machine Learning II course! This follows CMPUT 267, now called Machine Learning I. This course is meant to provide more depth than 466, and relies on having knowledge from Machine Learning I.
 
