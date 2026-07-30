@@ -1055,7 +1055,7 @@ strong {
   border: 0;
   padding: 0;
   background: transparent;
-  color: var(--color-accent);
+  color: var(--color-muted);
   font: inherit;
   line-height: inherit;
   cursor: pointer;
