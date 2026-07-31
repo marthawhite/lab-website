@@ -10,6 +10,7 @@ const publicationGroups = {
 
 const linkFields = [
   ["pdf", "PDF"],
+  ["website", "Website"],
   ["code", "Code"],
   ["project", "Project page"],
   ["video", "Video"],
@@ -274,7 +275,29 @@ function buildVenueAcronym(venue = "") {
   return acronym || "";
 }
 
+const STATUS_VENUES = new Set([
+  "under review",
+  "in review",
+  "under submission",
+  "in submission",
+  "submitted",
+  "in preparation",
+  "in prep",
+  "working paper",
+  "preprint"
+]);
+
+// Free-text status strings (e.g. "Under Review") are allowed in `booktitle` so they
+// appear in the venue line, but they are not real venues and must not drive the badge.
+function isStatusVenue(venue = "") {
+  return STATUS_VENUES.has(cleanText(venue).toLowerCase());
+}
+
 function buildVenueTag(venue = "", year = 0) {
+  if (isStatusVenue(venue)) {
+    return "";
+  }
+
   const acronym = buildVenueAcronym(venue);
 
   if (!acronym || acronym.length < 2 || !year) {
