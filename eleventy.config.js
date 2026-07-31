@@ -184,6 +184,11 @@ module.exports = function (eleventyConfig) {
       return `https://drive.google.com/file/d/${drive[1]}/preview`;
     }
 
+    const facebook = url.match(/facebook\.com\/(?:[^/]+\/videos\/\d+|watch\/?\?v=\d+)/);
+    if (facebook) {
+      return `https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(url)}&show_text=false`;
+    }
+
     return "";
   });
 
@@ -256,6 +261,12 @@ module.exports = function (eleventyConfig) {
     );
 
     return match && match.website ? match.website : "";
+  });
+
+  eleventyConfig.addFilter("withTalkMedia", (items = []) => {
+    return (Array.isArray(items) ? items : []).filter(
+      (item) => item && (item.embed || item.slides)
+    );
   });
 
   eleventyConfig.addFilter("sortTalks", (items = []) => {

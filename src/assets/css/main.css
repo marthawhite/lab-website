@@ -866,10 +866,6 @@ strong {
   line-height: 1.58;
 }
 
-.talk-embed-card__body p {
-  margin: 0;
-}
-
 .talk-card__kicker {
   margin-bottom: 0.35rem;
   font-size: 0.68rem;
@@ -902,11 +898,131 @@ strong {
   color: var(--color-text);
 }
 
-/* Talks — thumbnails grid */
-.talk-thumb-grid {
+/* Talks — compact table */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.talks-table-wrap {
+  overflow-x: auto;
+}
+
+.talks-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.talks-table th,
+.talks-table td {
+  padding: var(--space-3) var(--space-3) var(--space-3) 0;
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.talks-table thead th {
+  padding-top: 0;
+  padding-bottom: var(--space-2);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-muted-soft);
+  border-bottom: 1px solid var(--color-border-strong);
+  white-space: nowrap;
+}
+
+.talks-table__col-thumb {
+  width: 5.5rem;
+}
+
+.talks-table__col-year,
+.talks-table__col-slides {
+  white-space: nowrap;
+}
+
+.talks-table .talk-entry__title {
+  margin-bottom: 0.15rem;
+}
+
+.talks-table .talk-entry__venue {
+  margin-bottom: 0.15rem;
+}
+
+.talks-table .talk-card__kicker {
+  margin-bottom: 0;
+}
+
+/* Video/PDF thumbnail (compact, row-level) */
+.talk-row-thumb {
+  position: relative;
+  display: block;
+  width: 4.5rem;
+  aspect-ratio: 16 / 9;
+  padding: 0;
+  border: 0;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  background: #15090c;
+  cursor: pointer;
+}
+
+.talk-row-thumb__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.talk-row-thumb__img--blank {
+  background: var(--color-surface);
+}
+
+.talk-row-thumb__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -50%);
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--space-6) var(--space-5);
+  place-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding-left: 0.1rem;
+  border-radius: 50%;
+  background: rgba(138, 31, 45, 0.82);
+  color: #fff;
+  font-size: 0.55rem;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.talk-row-thumb:hover .talk-row-thumb__img,
+.talk-row-thumb:focus-visible .talk-row-thumb__img {
+  transform: scale(1.05);
+  filter: brightness(0.92);
+}
+
+.talk-row-thumb:hover .talk-row-thumb__play,
+.talk-row-thumb:focus-visible .talk-row-thumb__play {
+  background: var(--color-accent);
+}
+
+.talk-row-thumb__play--pdf {
+  width: auto;
+  height: auto;
+  padding: 0.12rem 0.35rem;
+  border-radius: 0.2rem;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
 }
 
 .talk-embed {
@@ -924,63 +1040,6 @@ strong {
   height: 100%;
   border: 0;
   display: block;
-}
-
-/* Thumbnail facade */
-.talk-thumb {
-  position: relative;
-  display: block;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  margin-bottom: var(--space-3);
-  padding: 0;
-  border: 0;
-  border-radius: var(--radius);
-  overflow: hidden;
-  background: #15090c;
-  cursor: pointer;
-}
-
-.talk-thumb__img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 0;
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.talk-thumb__img--blank {
-  background: var(--color-surface);
-}
-
-.talk-thumb__play {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-40%, -50%);
-  display: grid;
-  place-items: center;
-  width: 3.2rem;
-  height: 3.2rem;
-  padding-left: 0.2rem;
-  border-radius: 50%;
-  background: rgba(138, 31, 45, 0.82);
-  color: #fff;
-  font-size: 1.05rem;
-  transition: transform 0.2s ease, background 0.2s ease;
-}
-
-.talk-thumb:hover .talk-thumb__img,
-.talk-thumb:focus-visible .talk-thumb__img {
-  transform: scale(1.03);
-  filter: brightness(0.92);
-}
-
-.talk-thumb:hover .talk-thumb__play,
-.talk-thumb:focus-visible .talk-thumb__play {
-  transform: translate(-40%, -50%) scale(1.08);
-  background: var(--color-accent);
 }
 
 /* Video modal (thumbnail facade) */
@@ -1644,10 +1703,6 @@ strong {
   .publication-entry {
     grid-template-columns: 1fr;
     gap: 0.15rem;
-  }
-
-  .talk-thumb-grid {
-    grid-template-columns: 1fr;
   }
 
   .publication-entry__badge-wrap {

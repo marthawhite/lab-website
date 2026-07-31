@@ -165,6 +165,7 @@ function normalizeTalk(talk = {}, fileName = "") {
     dateLabel: formatDateLabel(date),
     type: talk.type || "",
     embed: talk.embed || "",
+    slides: talk.slides || "",
     thumbnail: talk.thumbnail || "",
     description: talk.description || ""
   };

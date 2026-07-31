@@ -12,52 +12,82 @@ permalink: /talks/
 </header>
 
 <section class="section talks-page">
-  <div class="talk-thumb-grid">
-    {% for talk in sortedTalks | selectattr("embed") | list %}
-      {% set src = talk.embed | embedUrl %}
-      {% set thumb = talk.thumbnail or (talk.embed | embedThumb) %}
-      <article class="talk-thumb-card">
-        <button
-          type="button"
-          class="talk-thumb"
-          data-talk-embed="{{ src }}"
-          data-talk-title="{{ talk.title }}"
-          aria-label="Play: {{ talk.title }}"
-        >
-          {% if thumb %}
-            <img class="talk-thumb__img" src="{{ thumb | withBaseUrl }}" alt="" loading="lazy">
-          {% else %}
-            <span class="talk-thumb__img talk-thumb__img--blank"></span>
-          {% endif %}
-          <span class="talk-thumb__play" aria-hidden="true">&#9654;</span>
-        </button>
-        <div class="talk-embed-card__body">
-          {%- if talk.type or talk.dateLabel %}
-            <p class="talk-card__kicker">
-              {%- if talk.type %}{{ talk.type }}{% endif -%}
-              {%- if talk.type and talk.dateLabel %} · {% endif -%}
-              {%- if talk.dateLabel %}{{ talk.dateLabel }}{% endif -%}
-            </p>
-          {%- endif -%}
-          <p class="talk-entry__title">{{ talk.title }}</p>
-          {%- if talk.event or talk.location %}
-            <p class="talk-entry__venue">
-              {%- if talk.event %}{{ talk.event }}{% endif -%}
-              {%- if talk.location %}{% if talk.event %}, {% endif %}{{ talk.location }}{% endif -%}
-            </p>
-          {%- endif -%}
-          {%- if talk.speaker %}
-            {%- set memberSite = members | memberWebsite(talk.speaker) -%}
-            {%- set speakerSite = memberSite if memberSite else ("/" if talk.speaker == site.facultyName else "") -%}
-            <p class="talk-entry__speaker-line">
+  <div class="talks-table-wrap">
+    <table class="talks-table">
+      <thead>
+        <tr>
+          <th scope="col" class="talks-table__col-thumb"><span class="sr-only">Preview</span></th>
+          <th scope="col" class="talks-table__col-talk">Talk</th>
+          <th scope="col" class="talks-table__col-speaker">Speaker</th>
+          <th scope="col" class="talks-table__col-year">Year</th>
+          <th scope="col" class="talks-table__col-slides">Slides</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for talk in sortedTalks | withTalkMedia %}
+          {% set src = talk.embed | embedUrl %}
+          {% set thumb = talk.thumbnail or (talk.embed | embedThumb) %}
+          {% set memberSite = members | memberWebsite(talk.speaker) %}
+          {% set speakerSite = memberSite if memberSite else ("/" if talk.speaker == site.facultyName else "") %}
+          <tr>
+            <td class="talks-table__col-thumb">
+              {% if talk.embed %}
+                <button
+                  type="button"
+                  class="talk-row-thumb"
+                  data-talk-embed="{{ src }}"
+                  data-talk-title="{{ talk.title }}"
+                  aria-label="Play: {{ talk.title }}"
+                >
+                  {% if thumb %}
+                    <img class="talk-row-thumb__img" src="{{ thumb | withBaseUrl }}" alt="" loading="lazy">
+                  {% else %}
+                    <span class="talk-row-thumb__img talk-row-thumb__img--blank"></span>
+                  {% endif %}
+                  <span class="talk-row-thumb__play" aria-hidden="true">&#9654;</span>
+                </button>
+              {% elif talk.slides %}
+                <a
+                  class="talk-row-thumb talk-row-thumb--pdf"
+                  href="{{ talk.slides | withBaseUrl }}"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="View slides: {{ talk.title }}"
+                >
+                  {% if thumb %}
+                    <img class="talk-row-thumb__img" src="{{ thumb | withBaseUrl }}" alt="" loading="lazy">
+                  {% else %}
+                    <span class="talk-row-thumb__img talk-row-thumb__img--blank"></span>
+                  {% endif %}
+                  <span class="talk-row-thumb__play talk-row-thumb__play--pdf" aria-hidden="true">PDF</span>
+                </a>
+              {% endif %}
+            </td>
+            <td class="talks-table__col-talk">
+              <p class="talk-entry__title">{{ talk.title }}</p>
+              {%- if talk.event or talk.location %}
+                <p class="talk-entry__venue">
+                  {%- if talk.event %}{{ talk.event }}{% endif -%}
+                  {%- if talk.location %}{% if talk.event %}, {% endif %}{{ talk.location }}{% endif -%}
+                </p>
+              {%- endif -%}
+              {%- if talk.type %}<p class="talk-card__kicker">{{ talk.type }}</p>{% endif -%}
+            </td>
+            <td class="talks-table__col-speaker">
               {%- if speakerSite %}<a href="{{ speakerSite | withBaseUrl }}">{{ talk.speaker }}</a>{% else %}{{ talk.speaker }}{% endif -%}
-            </p>
-          {%- endif -%}
-        </div>
-      </article>
-    {% else %}
-      <p class="meta">No recorded talks yet.</p>
-    {% endfor %}
+            </td>
+            <td class="talks-table__col-year">{{ talk.year if talk.year else "" }}</td>
+            <td class="talks-table__col-slides">
+              {%- if talk.slides %}<a href="{{ talk.slides | withBaseUrl }}" target="_blank" rel="noopener">PDF</a>{% endif -%}
+            </td>
+          </tr>
+        {% else %}
+          <tr>
+            <td colspan="5" class="meta">No recorded talks yet.</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
   </div>
 </section>
 
