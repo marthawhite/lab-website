@@ -1,5 +1,5 @@
 {
-  "name": "Scott Jordan",
+  "name": "Emma Jordan",
   "role": "Postdoc",
   "coSupervisor": "",
   "program": "Computing Science",
@@ -7,7 +7,7 @@
   "researchAreas": [
     "Reinforcement Learning"
   ],
-  "website": "https://scottjordan.github.io/scottjordan/",
-  "googleScholar": "",
+  "website": "https://emmaajordan.github.io/",
+  "googleScholar": "https://scholar.google.com/citations?user=BpFTlK0AAAAJ",
   "photo": "/assets/images/placeholders/member-placeholder.svg"
 }

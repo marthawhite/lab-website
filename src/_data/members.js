@@ -13,6 +13,11 @@ const roleOrder = {
   "Undergraduate Student": 5
 };
 
+function getLastName(name = "") {
+  const parts = name.trim().split(/\s+/).filter(Boolean);
+  return parts.length ? parts[parts.length - 1] : "";
+}
+
 function normalizeMember(member = {}, fileName = "") {
   return {
     id: path.basename(fileName, ".json"),
@@ -25,6 +30,7 @@ function normalizeMember(member = {}, fileName = "") {
     googleScholar: member.googleScholar || "",
     photo: member.photo || "/assets/images/placeholders/member-placeholder.svg",
     joiningDate: member.joiningDate || "",
+    lastName: getLastName(member.name || ""),
     order: roleOrder[member.role] || 999
   };
 }
@@ -34,16 +40,9 @@ function compareMembers(a, b) {
     return a.order - b.order;
   }
 
-  if (a.joiningDate && b.joiningDate && a.joiningDate !== b.joiningDate) {
-    return new Date(a.joiningDate) - new Date(b.joiningDate);
-  }
-
-  if (a.joiningDate && !b.joiningDate) {
-    return -1;
-  }
-
-  if (!a.joiningDate && b.joiningDate) {
-    return 1;
+  const lastNameCompare = a.lastName.localeCompare(b.lastName);
+  if (lastNameCompare !== 0) {
+    return lastNameCompare;
   }
 
   return a.name.localeCompare(b.name);
