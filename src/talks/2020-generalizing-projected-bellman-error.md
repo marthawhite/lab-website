@@ -5,5 +5,5 @@ event: Deep Reinforcement Learning / Theory of Reinforcement Learning Workshop (
 location: Berkeley, USA
 date: 2020-09-01
 type: Workshop
-slides: https://webdocs.cs.ualberta.ca/~whitem/presentations/2020_simons_objectives.pdf
+slides: /assets/pdfs/talks/2020_simons_objectives.pdf
 ---

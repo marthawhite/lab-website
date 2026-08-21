@@ -6,5 +6,5 @@ location: Canary Islands, Spain
 date: 2018-04-01
 type: Workshop
 embed: https://www.youtube.com/watch?v=Pl16QN03OiQ
-slides: https://webdocs.cs.ualberta.ca/~whitem/presentations/2018_dali_dyna.pdf
+slides: /assets/pdfs/talks/2018_dali_dyna.pdf
 ---

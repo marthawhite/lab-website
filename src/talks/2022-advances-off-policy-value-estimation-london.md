@@ -5,5 +5,5 @@ event: London Machine Learning Meetup
 location: London, UK
 date: 2022-04-01
 type: Invited
-slides: https://webdocs.cs.ualberta.ca/~whitem/presentations/london2022_objectives.pdf
+slides: /assets/pdfs/talks/london2022_objectives.pdf
 ---
