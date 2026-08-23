@@ -3,7 +3,8 @@
   "role": "PhD Student",
   "coSupervisor": "Ashok Cutkosky",
   "program": "Computing Science",
-  "joiningDate": "",
+  "joiningDate": "2019-09-01",
+  "endingDate": "2024-12-31",
   "researchAreas": [
     "Reinforcement Learning"
   ],

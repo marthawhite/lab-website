@@ -3,7 +3,8 @@
   "role": "MSc Student",
   "coSupervisor": "Adam White",
   "program": "Computing Science",
-  "joiningDate": "",
+  "joiningDate": "2023-09-01",
+  "endingDate": "2024-12-31",
   "researchAreas": [
     "Reinforcement Learning"
   ],
