@@ -16,7 +16,12 @@
     "affiliations": [
       {
         "segments": [
-          { "text": "Associate Professor, Department of Computing Science, University of Alberta" }
+          { "text": "Professor, Department of Computing Science, University of Alberta" }
+        ]
+      },
+	     {
+        "segments": [
+          { "text": "Canada Research Chair (CRC) in Reinforcement Learning, Tier 2" }
         ]
       },
       {
@@ -44,7 +49,7 @@
       },
       {
         "segments": [
-          { "text": "CEO of " },
+          { "text": "CTO of " },
           { "text": "RLCore", "url": "https://rlcore.ai/" }
         ]
       }
